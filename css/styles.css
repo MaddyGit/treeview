@@ -1,0 +1,16 @@
+.canvas-div {
+    border: 4px black double;
+    width: max-content;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    padding: 20px;
+    margin-right: 10px;
+    width: max-content;
+}
+
+.controls-div {
+    margin-left: 30px;
+}

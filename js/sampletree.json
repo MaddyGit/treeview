@@ -1,0 +1,164 @@
+{
+    "data": 200
+    , "children": [
+        {
+            "data": 100
+            , "children": [
+                {
+                    "data": 50
+                    , "children": [
+                        {
+                            "data": 25
+                            , "children": [
+                                {
+                                    "data": 12
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 37
+                                    , "children": null
+                                }
+                            ]
+                        }
+                        ,
+                        {
+                            "data": 75
+                            , "children": [
+                                {
+                                    "data": 62
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 87
+                                    , "children": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+                ,
+                {
+                    "data": 150
+                    , "children": [
+                        {
+                            "data": 125
+                            , "children": [
+                                {
+                                    "data": 112
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 137
+                                    , "children": null
+                                }
+                            ]
+                        }
+                        ,
+                        {
+                            "data": 175
+                            , "children": [
+                                {
+                                    "data": 162
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 187
+                                    , "children": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+                ,
+                {"data": 578, "children": null}
+                
+            ]
+        }
+        ,
+        {
+            "data": 300
+            , "children": [
+                {
+                    "data": 250
+                    , "children": [
+                        {
+                            "data": 225
+                            , "children": [
+                                {
+                                    "data": 212
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 237
+                                    , "children": [
+                                        {"data": 578, "children": null}
+                                        ,{"data": 578, "children": null}
+                                        ,{"data": 578, "children": null}
+                                        ,{"data": 578, "children": null}
+                                        ,{"data": 578, "children": null}
+                                        ,{"data": 578, "children": null}
+                                    ]
+                                }
+                            ]
+                        }
+                        ,
+                        {
+                            "data": 275
+                            , "children": [
+                                {
+                                    "data": 262
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 287
+                                    , "children": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+                ,
+                {
+                    "data": 350
+                    , "children": [
+                        {
+                            "data": 325
+                            , "children": [
+                                {
+                                    "data": 312
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 337
+                                    , "children": null
+                                }
+                            ]
+                        }
+                        ,
+                        {
+                            "data": 375
+                            , "children": [
+                                {
+                                    "data": 362
+                                    , "children": null
+                                }
+                                ,
+                                {
+                                    "data": 387
+                                    , "children": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
