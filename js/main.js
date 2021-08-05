@@ -18,11 +18,21 @@ function initCanvas() {
     ctx = canvas.getContext('2d')
 }
 
-await loadData()
 initCanvas()
 
-// Delegate Drawing
+// { First time draw
+await loadData()
 draw(canvas, sampletree)
+// }
+
+
+// { Drawing upon user input
+async function reDraw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    sampletree = undefined
+    await loadData()
+    draw(canvas, sampletree)
+}
 
 const xGapInput = document.getElementById('input-x-gap')
 xGapInput.value = config.xGap
@@ -48,10 +58,4 @@ nodeRadiusInput.addEventListener('change', ev => {
     config.nodeRadius = Number(ev.target.value)
     reDraw()
 })
-
-async function reDraw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    sampletree = undefined
-    await loadData()
-    draw(canvas, sampletree)
-}
+// }

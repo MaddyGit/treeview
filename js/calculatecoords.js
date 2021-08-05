@@ -2,21 +2,28 @@ import config from './config.js'
 
 let xStart, yMax
 
+// init starting values and call _calculateNodes
 export default function calculateNodes(parent, y) {
     
+    // starting point x (left most point, after drawing each leaf node this 
+    // increments by horizontal gap so that next leaf would not run into previous leaf)
     xStart = 0
+
+    // max depth tree ran into
     yMax = y
 
     _calculateNodes(parent, y)
     return {width: xStart, height: yMax}
 }
 
+// calculate x, y coordinates for each node
 function _calculateNodes(parent, y) {
 
     if (yMax < y)
         yMax = y
 
     if (parent.children && (parent.children.length > 0)) {
+        // it's non-leaf node, so iterate through all children and then calculate parent coordinates
 
         parent.children.forEach(child => {
             _calculateNodes(child, (y + config.yGap))
@@ -26,13 +33,15 @@ function _calculateNodes(parent, y) {
     }
 
     else {
-
-        parent.x = (xStart + Math.floor(config.nodeSpan / 2))
+        // it's leaf node so add coordinates and increment xStart by horizontal gap
+        parent.x = (xStart + Math.floor(config.xGap / 2))
         parent.y = y
         xStart += config.xGap
     }
 }
 
+// calculate parent coordinates (above middle child if odd number of children
+// , between first and last child if even number of children)
 function fillParentCoordinates(parent) {
 
     const nosChildren = parent.children.length

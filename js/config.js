@@ -1,9 +1,15 @@
 function getConfig() {
 
+    // margin from the top of the canvas
     let topMargin = 75
+
+    // horizontal gap between nodes
     let xGap = 80
+
+    // vertical gap between nodes
     let yGap = 80
-    let nodeSpan = 100
+
+    // radius of circle (which represents node visually and has node's data displayed in it)
     let nodeRadius = 25
 
 
@@ -28,14 +34,6 @@ function getConfig() {
         }
         , set yGap(value) {
             yGap = value
-        }
-        ,
-        get nodeSpan() {
-            return nodeSpan
-        }
-        ,
-        set nodeSpan(value) {
-            nodeSpan = value
         }
         , get nodeRadius() {
             return nodeRadius

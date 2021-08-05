@@ -4,8 +4,8 @@ import calculateNodes from "./calculatecoords.js"
 export async function draw(canvas, data) {
 
     const y = config.topMargin
-    
-    const {width, height} = calculateNodes(data, y)
+
+    const { width, height } = calculateNodes(data, y)
 
     let ctx = canvas.getContext('2d')
 
@@ -17,6 +17,7 @@ export async function draw(canvas, data) {
     drawEdges(data, ctx)
 }
 
+// iterate over all nodes and for each node, draw a circle with data of the node
 function drawNodes(ctx, data) {
 
     if (data.children && (data.children.length > 0)) {
@@ -33,6 +34,7 @@ function drawNodes(ctx, data) {
     }
 }
 
+// iterate all nodes having children and draw edges from parent to children
 function drawEdges(data, ctx) {
 
     if (data.children && (data.children.length > 0)) {
@@ -44,6 +46,7 @@ function drawEdges(data, ctx) {
     }
 }
 
+// draw actual line (edge) on canvas
 function drawEdge(parent, child, ctx) {
 
     const { xSub, ySub } = getCircleSubtraction(parent, child)
@@ -54,6 +57,9 @@ function drawEdge(parent, child, ctx) {
     ctx.stroke()
 }
 
+// find coordinates to be subtracted so that the edge line drawn won't be 
+// from parent circle's center to child circle's center, 
+// rather it will be from parent circle's circumference to child circle's circumference
 function getCircleSubtraction(parent, child) {
     const x1 = child.x, y1 = child.y, x2 = parent.x, y2 = parent.y
     const slopeAngle = Math.atan((y2 - y1) / (x2 - x1))
@@ -63,6 +69,7 @@ function getCircleSubtraction(parent, child) {
         : { xSub: (+1 * (config.nodeRadius * Math.cos(slopeAngle))), ySub: (+1 * (config.nodeRadius * Math.sin(slopeAngle))) }
 }
 
+// draw actual circle on canvas
 function drawCircle(data, x, y, r, ctx) {
 
     const lineWidth = ctx.lineWidth
